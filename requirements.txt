@@ -1,0 +1,14 @@
+# Core dependencies for this repository
+# Use a recent Python 3.9+ environment.
+
+pandas>=2.0.0
+# For notebook usage (optional but convenient)
+jupyter>=1.0.0
+
+# ML & fine-tuning stack for experiments
+transformers>=4.43.0
+peft>=0.12.0
+datasets>=2.20.0
+accelerate>=0.33.0
+huggingface_hub>=0.24.0
+Pillow>=10.0.0
