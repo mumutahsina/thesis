@@ -1,0 +1,62 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE / Editor settings
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Notebooks and checkpoints
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Datasets and processed data (large, reproducible)
+datasets/
+processed_dataset/
+
+# Training outputs and artifacts
+runs/
+outputs/
+checkpoints/
+
+# Models and weights
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Caches
+.cache/
+.cache/huggingface/
+huggingface/
+
+# Databases and local storage
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
