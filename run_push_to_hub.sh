@@ -36,6 +36,15 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# Check that the checkpoint directory exists before proceeding
+if [ ! -d "$CKPT_DIR" ]; then
+  echo "[push_to_hub] Checkpoint directory not found: $CKPT_DIR"
+  echo "[push_to_hub] Skipping upload. Please run fine-tuning first, e.g.:"
+  echo "  bash run_smolvlm_finetune.sh 500m    # or 1b / 2.2b as needed"
+  echo "[push_to_hub] Expected outputs under runs/finetune/<HF_MODEL_ID_WITH_SLASHES_REPLACED_BY_UNDERSCORES>"
+  exit 0
+fi
+
 if command -v python3 >/dev/null 2>&1; then PY=python3; else PY=python; fi
 
 if [ "$USE_VENV" -eq 1 ]; then
